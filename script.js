@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize theme and color settings
+    const themeSelect = document.getElementById('theme');
+    const colorPicker = document.getElementById('color');
+    colorPicker.addEventListener('change', (e) => changeColor(e.target.value));
+    themeSelect.addEventListener('change', (e) => changeTheme(e.target.value));
+});
+
 function showSection(sectionId) {
     const sections = ['auth', 'dashboard', 'tasks', 'build', 'libraries'];
     sections.forEach(id => {
@@ -79,4 +87,20 @@ function showLoading(isLoading) {
     loadingIndicator.style.display = isLoading ? 'block' : 'none';
 }
 
-// Add other necessary functions here
+function changeColor(color) {
+    document.documentElement.style.setProperty('--primary-color', color);
+}
+
+function changeTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.documentElement.style.setProperty('--background-color', 'var(--dark-background-color)');
+        document.documentElement.style.setProperty('--text-color', 'var(--dark-text-color)');
+        document.documentElement.style.setProperty('--card-bg-color', 'var(--dark-card-bg-color)');
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.documentElement.style.setProperty('--background-color', '#f4f4f4');
+        document.documentElement.style.setProperty('--text-color', '#333');
+        document.documentElement.style.setProperty('--card-bg-color', '#fff');
+    }
+}
