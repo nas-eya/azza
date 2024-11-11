@@ -9,3 +9,4 @@ updates:
     directory: "/" # Location of the requirements.txt file, assuming it's in the root folder
     schedule:
       interval: "weekly" # Checks for updates once a week
+      
