@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #3498db; /* Primary theme color */
+    --background-color: #f4f4f4; /* Light background */
+    --text-color: #333; /* Dark text */
+    --card-bg-color: #fff; /* Card background */
+    --border-radius: 10px; /* Rounded corners */
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.color-picker,
+.theme-switcher {
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: var(--text-color);
+}
+
+.card {
+    background: var(--card-bg-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button.btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 10px;
+}
+
+button.btn:hover {
+    background: darken(var(--primary-color), 10%);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}

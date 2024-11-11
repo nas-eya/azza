@@ -1,0 +1,24 @@
+{
+    "app_name": "Az App Manager",
+    "version": "1.0",
+    "description": "A tool to manage applications.",
+    "path": {
+        "python_file": "C:\\Users\\User\\OneDrive\\Desktop\\Azza\\future\\az_appmanager.py",
+        "html_file": "C:\\Users\\User\\OneDrive\\Desktop\\Azza\\future\\index.html",
+        "css_file": "C:\\Users\\User\\OneDrive\\Desktop\\Azza\\future\\styles.css",
+        "java_file": "C:\\Users\\User\\OneDrive\\Desktop\\Azza\\future\\script.java"
+    },
+    "dependencies": [
+        "numpy",        
+        "tkinter",
+        "bcrypt",
+        "spacy",
+        "joblib",
+        "scikit-learn",
+        "requests"
+    ],
+    "settings": {
+        "debug": true,
+        "log_level": "INFO"
+    }
+}

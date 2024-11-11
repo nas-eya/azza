@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AZZA - Customizable Interface</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="handcrafted">AZZA</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showSection('auth')">Login/Register</a></li>
+                    <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+                    <li><a href="#" onclick="showSection('tasks')">Tasks</a></li>
+                    <li><a href="#" onclick="showSection('build')">Build App</a></li>
+                    <li><a href="#" onclick="showSection('libraries')">Manage Libraries</a></li>
+                </ul>
+            </nav>
+            <div class="color-picker">
+                <label for="color">Color Theme: </label>
+                <input type="color" id="color" value="#3498db" onchange="changeColor(this.value)">
+            </div>
+            <div class="theme-switcher">
+                <label for="theme">Select Theme: </label>
+                <select id="theme" onchange="changeTheme(this.value)">
+                    <option value="default">Default</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+        </header>
+        <main>
+            <section id="auth">
+                <h2>Login/Register</h2>
+                <form onsubmit="event.preventDefault(); login();">
+                    <div class="form-group">
+                        <input type="text" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" required>
+                    </div>
+                    <button type="button" class="btn" onclick="register()">Register</button>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </section>
+
+            <section id="dashboard" style="display:none;" class="card">
+                <h2>Dashboard</h2>
+                <p>Welcome to your dashboard!</p>
+                <div class="button-group">
+                    <button class="btn" onclick="viewCommandHistory()">View Command History</button>
+                    <button class="btn" onclick="showTaskQueueStatus()">Show Task Queue Status</button>
+                </div>
+            </section>
+
+            <section id="tasks" style="display:none;" class="card">
+                <h2>Task Management</h2>
+                <button class="btn" onclick="runTask()">Run Task</button>
+                <button class="btn" onclick="cancelTask()">Cancel Task</button>
+            </section>
+
+            <section id="build" style="display:none;" class="card">
+                <h2>Build Application</h2>
+                <button class="btn" onclick="buildApp()">Build App</button>
+            </section>
+
+            <section id="libraries" style="display:none;" class="card">
+                <h2>Manage Libraries</h2>
+                <button class="btn" onclick="installLibrary()">Install Library</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 App Manager</p>
+        </footer>
+        <div id="loading" style="display:none;">Loading...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

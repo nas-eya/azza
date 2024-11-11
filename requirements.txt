@@ -1,0 +1,5 @@
+bcrypt
+spacy
+joblib
+scikit-learn
+requests
